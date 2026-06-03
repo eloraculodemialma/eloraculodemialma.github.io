@@ -3,131 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El Mazo · 78 cartas · El Oráculo de mi Alma</title>
-<meta name="description" content="Las 78 cartas de El Oráculo de mi Alma. Cuentos que curan, cartas que hablan.">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<title>El Oráculo de mi Alma · Enlaces</title>
+<meta name="description" content="El Oráculo de mi Alma — cuentos, tarot y reconstrucción. Todos mis enlaces en un solo lugar.">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,400;1,600&family=Lora:ital@0;1&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{--bg:#0D0418;--v4:#4B2067;--rv:#C084D4;--rp:#D4789A;--gold:#C9A84C;--tx1:#FADADD;--tx2:#EDD5E8;--tx4:#B89AAC;}
-html,body{background:var(--bg);font-family:'Lora',Georgia,serif;color:var(--tx2);overflow-x:hidden;}
+:root{
+  --bg:#0D0418;--v4:#4B2067;--rv:#C084D4;--rp:#D4789A;
+  --gold:#C9A84C;--tx1:#FADADD;--tx2:#EDD5E8;--tx4:#B89AAC;
+}
+html,body{width:100%;min-height:100%;background:var(--bg);font-family:'Lora',Georgia,serif;color:var(--tx2);overflow-x:hidden;}
 #cv-bg{position:fixed;inset:0;z-index:0;}
 #cv-sakura{position:fixed;inset:0;z-index:1;pointer-events:none;}
-.wrap{position:relative;z-index:5;max-width:1100px;margin:0 auto;padding:46px 20px 70px;text-align:center;}
-.ornamento{width:74px;height:74px;border-radius:50%;border:1.5px solid rgba(201,168,76,.55);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.4rem;margin:0 auto 16px;background:radial-gradient(circle at 40% 35%,rgba(75,32,103,.7),rgba(13,4,24,.95));box-shadow:0 0 40px rgba(192,132,212,.3);position:relative;}
-.ornamento::before{content:'';position:absolute;inset:-8px;border-radius:50%;border:1px solid rgba(192,132,212,.22);animation:giro 16s linear infinite;}
+
+.wrap{position:relative;z-index:5;max-width:480px;margin:0 auto;padding:54px 26px 60px;display:flex;flex-direction:column;align-items:center;text-align:center;min-height:100vh;}
+
+/* cabecera */
+.ornamento{width:84px;height:84px;border-radius:50%;border:1.5px solid rgba(201,168,76,.55);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.5rem;margin-bottom:20px;position:relative;background:radial-gradient(circle at 40% 35%,rgba(75,32,103,.7),rgba(13,4,24,.95));box-shadow:0 0 40px rgba(192,132,212,.3);}
+.ornamento::before{content:'';position:absolute;inset:-9px;border-radius:50%;border:1px solid rgba(192,132,212,.22);animation:giro 16s linear infinite;}
 @keyframes giro{to{transform:rotate(360deg)}}
-h1{font-family:'Dancing Script',cursive;font-weight:700;font-size:clamp(2.2rem,6vw,3.2rem);color:var(--tx1);text-shadow:0 0 34px rgba(192,132,212,.5);line-height:1.05;}
-.tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--tx2);opacity:.88;margin:10px 0 4px;}
-.marca{font-family:'Cinzel Decorative',serif;font-size:.5rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;opacity:.8;margin-bottom:26px;}
-.filtros{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:30px;}
-.chip{font-family:'Cinzel Decorative',serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);background:rgba(75,32,103,.28);border:1px solid rgba(201,168,76,.35);padding:9px 15px;border-radius:22px;cursor:pointer;transition:.2s;}
-.chip:hover{border-color:rgba(201,168,76,.7);transform:translateY(-2px);}
-.chip.on{background:rgba(201,168,76,.16);border-color:var(--gold);color:var(--tx1);}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:20px;}
-.carta{cursor:pointer;opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.3,1);}
-.carta.in{opacity:1;transform:translateY(0);}
-.carta:hover{transform:translateY(-9px) scale(1.035);}
-.imgwrap{position:relative;overflow:hidden;border-radius:11px;border:1px solid rgba(201,168,76,.4);box-shadow:0 8px 24px rgba(0,0,0,.45);transition:box-shadow .3s,border-color .3s;aspect-ratio:2/3;background:#15092a;}
-.carta:hover .imgwrap{box-shadow:0 14px 40px rgba(192,132,212,.4),0 0 22px rgba(201,168,76,.35);border-color:var(--gold);}
-.imgwrap img{width:100%;height:100%;display:block;object-fit:cover;}
-.imgwrap::after{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,240,200,.28),transparent);transform:skewX(-18deg);transition:left .7s ease;pointer-events:none;}
-.carta:hover .imgwrap::after{left:130%;}
-.carta .n{font-family:'Cormorant Garamond',serif;font-size:.96rem;color:var(--tx1);font-weight:600;margin-top:9px;line-height:1.15;}
-.carta .s{font-family:'Lora',serif;font-style:italic;font-size:.72rem;color:var(--tx4);}
-.pie{margin-top:48px;display:flex;flex-direction:column;align-items:center;gap:16px;}
-.btn-volver{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--tx1);text-decoration:none;border:1px solid rgba(201,168,76,.5);padding:12px 26px;border-radius:26px;background:rgba(201,168,76,.1);transition:.25s;}
-.btn-volver:hover{background:rgba(201,168,76,.2);border-color:var(--gold);transform:translateY(-2px);}
-.firma{font-family:'Cinzel Decorative',serif;font-size:.46rem;letter-spacing:.26em;color:var(--gold);text-transform:uppercase;opacity:.7;}
-.modal{position:fixed;inset:0;z-index:50;background:rgba(7,3,15,.93);display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(5px);}
-.modal.open{display:flex;animation:fade .3s ease;}
-@keyframes fade{from{opacity:0}to{opacity:1}}
-.m-box{max-width:760px;width:100%;display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:center;animation:pop .4s cubic-bezier(.2,.8,.3,1);}
-@keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
-.m-box img{width:240px;border-radius:14px;border:1px solid rgba(201,168,76,.5);box-shadow:0 12px 40px rgba(0,0,0,.6);}
-.m-txt{flex:1;min-width:240px;text-align:left;}
-.m-txt .ms{font-family:'Cinzel Decorative',serif;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
-.m-txt .mn{font-family:'Dancing Script',cursive;font-size:2.1rem;color:var(--tx1);margin:4px 0 14px;}
-.m-txt .mt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--tx2);line-height:1.4;margin-bottom:14px;}
-.m-txt .mnota{font-family:'Lora',serif;font-size:.92rem;color:var(--tx4);line-height:1.6;border-left:2px solid rgba(201,168,76,.5);padding-left:14px;}
-.cerrar{position:fixed;top:18px;right:26px;font-size:2rem;color:var(--tx2);cursor:pointer;opacity:.7;}
-.cerrar:hover{opacity:1;}
+.titulo{font-family:'Dancing Script',cursive;font-weight:700;font-size:2.5rem;color:var(--tx1);line-height:1.1;text-shadow:0 0 38px rgba(192,132,212,.55);}
+.tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--tx2);opacity:.88;margin:12px 0 6px;line-height:1.6;}
+.marca{font-family:'Cinzel Decorative',serif;font-size:.5rem;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;opacity:.8;margin-bottom:34px;}
+
+/* enlaces */
+.enlaces{width:100%;display:flex;flex-direction:column;gap:15px;}
+.link{
+  display:flex;align-items:center;gap:16px;text-decoration:none;
+  padding:17px 20px;border-radius:16px;
+  background:rgba(75,32,103,.28);
+  border:1px solid rgba(201,168,76,.35);
+  backdrop-filter:blur(6px);
+  transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.link:hover{transform:translateY(-3px);background:rgba(192,132,212,.18);border-color:rgba(201,168,76,.7);box-shadow:0 8px 30px rgba(192,132,212,.25);}
+.link .ic{font-size:1.5rem;width:34px;flex:0 0 34px;text-align:center;filter:drop-shadow(0 0 8px rgba(192,132,212,.5));}
+.link .tx{flex:1;text-align:left;}
+.link .t1{display:block;font-family:'Cormorant Garamond',serif;font-size:1.18rem;color:var(--tx1);font-weight:600;line-height:1.2;}
+.link .t2{display:block;font-family:'Lora',serif;font-style:italic;font-size:.78rem;color:var(--tx4);margin-top:3px;}
+.link .flecha{color:var(--gold);opacity:.6;font-size:1rem;}
+
+.destacado{background:rgba(201,168,76,.14);border-color:rgba(201,168,76,.6);}
+
+.pie{margin-top:38px;display:flex;flex-direction:column;align-items:center;gap:14px;}
+.redes{display:flex;gap:22px;}
+.redes a{color:var(--tx4);text-decoration:none;font-size:1.5rem;transition:color .2s,transform .2s;}
+.redes a:hover{color:var(--rv);transform:scale(1.15);}
+.firma{font-family:'Cinzel Decorative',serif;font-size:.46rem;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;opacity:.7;}
 </style>
 </head>
 <body>
 <canvas id="cv-bg"></canvas>
 <canvas id="cv-sakura"></canvas>
+
 <div class="wrap">
-  <div class="ornamento">&#9790;</div>
-  <h1>El Mazo de mi Alma</h1>
-  <p class="tagline">Setenta y ocho cartas. Cada una, una pregunta.</p>
-  <div class="marca">&#10022; Cuentos que curan &middot; Cartas que hablan &#10022;</div>
-  <div class="filtros" id="filtros">
-    <span class="chip on" data-c="todas">Todas</span>
-    <span class="chip" data-c="Mayores">Arcanos Mayores</span>
-    <span class="chip" data-c="Bastos">Bastos</span>
-    <span class="chip" data-c="Copas">Copas</span>
-    <span class="chip" data-c="Espadas">Espadas</span>
-    <span class="chip" data-c="Oros">Oros</span>
-  </div>
-  <div class="grid" id="grid"></div>
+  <div class="ornamento">☾</div>
+  <h1 class="titulo">El Oráculo<br>de mi Alma</h1>
+  <p class="tagline">Soy la voz que no sabe<br>callarse a sí misma.</p>
+  <div class="marca">✦ Cuentos que curan · Cartas que hablan ✦</div>
+
+  <nav class="enlaces">
+    <!-- ⬇️ Reemplazá las URLs (href) por las reales de tu blog -->
+    <a class="link destacado" href="https://eloraculodemialma.blog/pregunta-al-tarot">
+      <span class="ic">🃏</span>
+      <span class="tx"><span class="t1">Pregúntale al Tarot</span><span class="t2">Pensá una pregunta. La carta responde.</span></span>
+      <span class="flecha">↗</span>
+    </a>
+    <a class="link" href="https://eloraculodemialma.blog">
+      <span class="ic">📖</span>
+      <span class="tx"><span class="t1">Leé los cuentos</span><span class="t2">Relatos del Oráculo en el blog</span></span>
+      <span class="flecha">↗</span>
+    </a>
+    <a class="link" href="mazo/">
+      <span class="ic">🕯️</span>
+      <span class="tx"><span class="t1">El Mazo de 78 cartas</span><span class="t2">Recorré el oráculo completo</span></span>
+      <span class="flecha">↗</span>
+    </a>
+    <a class="link" href="https://www.tiktok.com/@eloraculodemialma">
+      <span class="ic">🎵</span>
+      <span class="tx"><span class="t1">TikTok</span><span class="t2">Cuentos y cartas, en video</span></span>
+      <span class="flecha">↗</span>
+    </a>
+    <a class="link" href="https://www.instagram.com/eloraculodemialma">
+      <span class="ic">📷</span>
+      <span class="tx"><span class="t1">Instagram</span><span class="t2">Stories y talismanes diarios</span></span>
+      <span class="flecha">↗</span>
+    </a>
+    <a class="link" href="https://www.pinterest.com/eloraculodemialma">
+      <span class="ic">📌</span>
+      <span class="tx"><span class="t1">Pinterest</span><span class="t2">Frases para guardar y volver</span></span>
+      <span class="flecha">↗</span>
+    </a>
+  </nav>
+
   <div class="pie">
-    <a class="btn-volver" href="https://eloraculodemialma.blog/pregunta-al-tarot/">&#127183; Pedile una carta al Or&aacute;culo</a>
-    <a class="btn-volver" href="../">&larr; Volver al inicio</a>
+    <div class="redes">
+      <a href="https://www.tiktok.com/@eloraculodemialma" title="TikTok">♪</a>
+      <a href="https://www.instagram.com/eloraculodemialma" title="Instagram">◎</a>
+      <a href="https://www.pinterest.com/eloraculodemialma" title="Pinterest">✦</a>
+    </div>
     <div class="firma">eloraculodemialma.blog</div>
   </div>
 </div>
-<div class="modal" id="modal">
-  <span class="cerrar" id="cerrar">&times;</span>
-  <div class="m-box">
-    <img id="m-img" src="" alt="">
-    <div class="m-txt">
-      <div class="ms" id="m-sub"></div>
-      <div class="mn" id="m-name"></div>
-      <div class="mt" id="m-texto"></div>
-      <div class="mnota" id="m-nota"></div>
-    </div>
-  </div>
-</div>
+
 <script>
-const CARDS=[{"name": "El Loco", "sub": "Sin número", "img": "00_el_loco.webp", "texto": "Saltás sin saber dónde caés, y esa es la única forma honesta de empezar.", "nota": "El Loco es la energía libre antes de toda forma. No tiene número porque todavía no eligió: es puro movimiento.", "cat": "Mayores"}, {"name": "El Mago", "sub": "Arcano I", "img": "01_el_mago.webp", "texto": "Tenés todo sobre la mesa. Lo que falta no es talento, es animarte a empezar.", "nota": "El Mago es el comienzo activo, la energía que se pone a trabajar. Todo está disponible; falta tu gesto.", "cat": "Mayores"}, {"name": "La Papisa", "sub": "Arcano II", "img": "02_la_papisa.webp", "texto": "Lo que callás también te está formando. Quedate un rato más en el silencio.", "nota": "La Papisa guarda, gesta, espera. Es el saber que aún no se dice, la semilla bajo la nieve.", "cat": "Mayores"}, {"name": "La Emperatriz", "sub": "Arcano III", "img": "03_la_emperatriz.webp", "texto": "Algo en vos quiere nacer. Dejalo crecer sin apurarlo a fórceps.", "nota": "La Emperatriz es la creatividad y la abundancia, lo femenino que produce. Lo que sembraste toma cuerpo.", "cat": "Mayores"}, {"name": "El Emperador", "sub": "Arcano IV", "img": "04_el_emperador.webp", "texto": "Poné orden, pero no para controlar: para sostener lo que amás.", "nota": "El Emperador es la estructura, el padre, el territorio. Estabilidad que protege o, si se endurece, aprisiona.", "cat": "Mayores"}, {"name": "El Papa", "sub": "Arcano V", "img": "05_el_papa.webp", "texto": "Estás buscando permiso. La pregunta es de quién, y por qué todavía.", "nota": "El Papa es el puente entre cielo y tierra: el maestro que une, traduce y da sentido.", "cat": "Mayores"}, {"name": "Los Enamorados", "sub": "Arcano VI", "img": "06_los_enamorados.webp", "texto": "No es solo amor: es elegir. Y elegir siempre deja algo del otro lado.", "nota": "Los Enamorados es la encrucijada. No habla del flechazo sino de la decisión que te define.", "cat": "Mayores"}, {"name": "El Carro", "sub": "Arcano VII", "img": "07_el_carro.webp", "texto": "Avanzás cuando dejás de pelear contra vos misma.", "nota": "El Carro no lucha contra sus caballos: los guía. Triunfo en movimiento, si sabés hacia dónde.", "cat": "Mayores"}, {"name": "La Justicia", "sub": "Arcano VIII", "img": "08_la_justicia.webp", "texto": "Lo que diste vuelve. Mirá la cuenta sin maquillarla.", "nota": "La Justicia es el equilibrio exacto, la ley interior. Corta lo que sobra para que quede lo justo.", "cat": "Mayores"}, {"name": "El Ermitaño", "sub": "Arcano IX", "img": "09_el_ermitano.webp", "texto": "Bajá el ruido. La respuesta hace rato que te espera en silencio.", "nota": "El Ermitaño se retira para ver. Su lámpara no ilumina el camino entero, solo el próximo paso.", "cat": "Mayores"}, {"name": "La Rueda de la Fortuna", "sub": "Arcano X", "img": "10_la_rueda_de_la_fortuna.webp", "texto": "Algo gira y no lo podés frenar. Ponete en el centro y dejá que ruede.", "nota": "La Rueda es el ciclo, el cambio que no controlás. Lo que sube baja; lo que baja, vuelve.", "cat": "Mayores"}, {"name": "La Fuerza", "sub": "Arcano XI", "img": "11_la_fuerza.webp", "texto": "No se trata de vencer a la bestia, sino de acariciarla hasta que confíe.", "nota": "La Fuerza es el dominio suave: la energía vital que no se reprime, se encauza con ternura.", "cat": "Mayores"}, {"name": "El Colgado", "sub": "Arcano XII", "img": "12_el_colgado.webp", "texto": "Estás de cabeza, sí. Desde ahí ves lo que de pie no podías.", "nota": "El Colgado es la pausa fértil, la entrega. No es castigo: es otro punto de vista que pide tiempo.", "cat": "Mayores"}, {"name": "Arcano XIII", "sub": "Arcano XIII", "img": "13_arcano_xiii.webp", "texto": "Algo termina sin nombre. Dejalo morir para que pueda pasar lo otro.", "nota": "El arcano sin nombre es la limpieza, la transformación radical. Corta lo muerto para liberar lo vivo.", "cat": "Mayores"}, {"name": "La Templanza", "sub": "Arcano XIV", "img": "14_la_templanza.webp", "texto": "Mezclá sin apuro. Lo que se fuerza se rompe; lo que se integra, sana.", "nota": "La Templanza es el ángel que combina, la circulación entre dos vasos. Equilibrio que cura.", "cat": "Mayores"}, {"name": "El Diablo", "sub": "Arcano XV", "img": "15_el_diablo.webp", "texto": "¿Qué cadena sostenés vos misma, creyendo que te ata?", "nota": "El Diablo es la energía cruda, el deseo, la sombra creativa. Esclaviza o crea, según quién mande.", "cat": "Mayores"}, {"name": "La Torre", "sub": "Arcano XVI", "img": "16_la_torre.webp", "texto": "Lo que cae, venía cayendo hace rato. Gracias al derrumbe.", "nota": "La Torre rompe de un golpe la estructura falsa. Liberación disfrazada de catástrofe.", "cat": "Mayores"}, {"name": "La Estrella", "sub": "Arcano XVII", "img": "17_la_estrella.webp", "texto": "Respirá. Hay agua después del incendio.", "nota": "La Estrella aparece después de La Torre. Su luz no resuelve: orienta. Esperanza y entrega generosa.", "cat": "Mayores"}, {"name": "La Luna", "sub": "Arcano XVIII", "img": "18_la_luna.webp", "texto": "No todo lo que sentís es verdad. Caminá igual, aunque no veas el fondo.", "nota": "La Luna es el mundo de la noche, lo inconsciente, lo que aún no tiene forma. Intuición y espejismo.", "cat": "Mayores"}, {"name": "El Sol", "sub": "Arcano XIX", "img": "19_el_sol.webp", "texto": "Un día dejás de pedir permiso para brillar.", "nota": "El Sol da su luz a todos por igual. Claridad, alegría, el ser que ya sabe lo que es.", "cat": "Mayores"}, {"name": "El Juicio", "sub": "Arcano XX", "img": "20_el_juicio.webp", "texto": "Algo te llama a renacer. ¿Vas a contestar esta vez?", "nota": "El Juicio convoca a una vida nueva. No espera que estés lista: el llamado llega y rompe la tumba.", "cat": "Mayores"}, {"name": "El Mundo", "sub": "Arcano XXI", "img": "21_el_mundo.webp", "texto": "Cerraste un círculo. Bailá antes de empezar el siguiente.", "nota": "El Mundo es la realización, la integración total. Fin de un ciclo y promesa del que viene.", "cat": "Mayores"}, {"name": "As de Bastos", "sub": "Bastos", "img": "01_as_de_bastos.webp", "texto": "Una chispa nueva te quema las manos. Es deseo: agarralo.", "nota": "As de Bastos: el don del fuego, la fuerza creativa en estado puro. Todo empieza acá.", "cat": "Bastos"}, {"name": "Dos de Bastos", "sub": "Bastos", "img": "02_dos_de_bastos.webp", "texto": "Tenés el fuego encendido pero todavía guardado. Está bien esperar.", "nota": "Dos de Bastos: la energía se acumula y se gesta. Aún no salió al mundo.", "cat": "Bastos"}, {"name": "Tres de Bastos", "sub": "Bastos", "img": "03_tres_de_bastos.webp", "texto": "Lo que prendiste ya da calor a otros. Primer fruto de tu deseo.", "nota": "Tres de Bastos: la primera realización, la creación que sale y se comparte.", "cat": "Bastos"}, {"name": "Cuatro de Bastos", "sub": "Bastos", "img": "04_cuatro_de_bastos.webp", "texto": "El fuego tiene casa. Estabilidad, o un techo que empieza a pesar.", "nota": "Cuatro de Bastos: estructura sólida del deseo. Base firme o rutina que apaga.", "cat": "Bastos"}, {"name": "Cinco de Bastos", "sub": "Bastos", "img": "05_cinco_de_bastos.webp", "texto": "Algo en tu fuego encuentra resistencia. La prueba que te hace crecer.", "nota": "Cinco de Bastos: la crisis en el centro, el desafío que obliga a evolucionar.", "cat": "Bastos"}, {"name": "Seis de Bastos", "sub": "Bastos", "img": "06_seis_de_bastos.webp", "texto": "El deseo florece y se ve. Disfrutá el calor sin pedir perdón.", "nota": "Seis de Bastos: la belleza del fuego, el triunfo gozoso, el don recibido.", "cat": "Bastos"}, {"name": "Siete de Bastos", "sub": "Bastos", "img": "07_siete_de_bastos.webp", "texto": "Tu fuego pide acción. Sostené tu terreno aunque tiemble.", "nota": "Siete de Bastos: la energía puesta en el mundo, el desafío que se enfrenta de pie.", "cat": "Bastos"}, {"name": "Ocho de Bastos", "sub": "Bastos", "img": "08_ocho_de_bastos.webp", "texto": "El deseo se mueve rápido. No te quedes mirando: seguilo.", "nota": "Ocho de Bastos: el equilibrio en movimiento, la fuerza que ya circula plena.", "cat": "Bastos"}, {"name": "Nueve de Bastos", "sub": "Bastos", "img": "09_nueve_de_bastos.webp", "texto": "Tan encendida estás que arde hasta el descanso. Casi llegás.", "nota": "Nueve de Bastos: la plenitud que duele, la fuerza tan llena que pide transformarse.", "cat": "Bastos"}, {"name": "Diez de Bastos", "sub": "Bastos", "img": "10_diez_de_bastos.webp", "texto": "Cargás demasiado fuego. Un ciclo se cierra: soltá para avanzar.", "nota": "Diez de Bastos: la acumulación máxima del deseo. Fin de etapa que pide pasar a otra.", "cat": "Bastos"}, {"name": "Sota de Bastos", "sub": "Bastos", "img": "11_sota_de_bastos.webp", "texto": "Una curiosidad ardiente entra en tu vida. Dejala aprender.", "nota": "Sota de Bastos: la energía joven del fuego, el aprendiz del deseo, el primer impulso.", "cat": "Bastos"}, {"name": "Caballo de Bastos", "sub": "Bastos", "img": "12_caballo_de_bastos.webp", "texto": "Ganas de salir, de moverte, de incendiar el camino. Andá.", "nota": "Caballo de Bastos: la acción del fuego, el viaje, la transición que empuja hacia afuera.", "cat": "Bastos"}, {"name": "Reina de Bastos", "sub": "Bastos", "img": "13_reina_de_bastos.webp", "texto": "Tu fuego ya no grita: calienta desde adentro. Madurez creativa.", "nota": "Reina de Bastos: la maestría interior del deseo, la que sostiene la llama sin quemarse.", "cat": "Bastos"}, {"name": "Rey de Bastos", "sub": "Bastos", "img": "14_rey_de_bastos.webp", "texto": "Sabés mandar tu fuego. Usá el poder, no lo exhibas.", "nota": "Rey de Bastos: la realización del deseo en el mundo, la autoridad creativa madura.", "cat": "Bastos"}, {"name": "As de Copas", "sub": "Copas", "img": "01_as_de_copas.webp", "texto": "Un sentimiento nuevo te desborda. Dejá que entre.", "nota": "As de Copas: el don del amor, la emoción en estado puro. El corazón se abre.", "cat": "Copas"}, {"name": "Dos de Copas", "sub": "Copas", "img": "02_dos_de_copas.webp", "texto": "Dos que se reconocen. Un vínculo empieza a gestarse.", "nota": "Dos de Copas: el encuentro, la emoción que se acumula entre dos. Aún por florecer.", "cat": "Copas"}, {"name": "Tres de Copas", "sub": "Copas", "img": "03_tres_de_copas.webp", "texto": "El afecto se festeja. Lo que sentís ya se comparte.", "nota": "Tres de Copas: la primera alegría del vínculo, la celebración, la emoción que sale.", "cat": "Copas"}, {"name": "Cuatro de Copas", "sub": "Copas", "img": "04_cuatro_de_copas.webp", "texto": "El corazón en pausa. Estabilidad emocional, o aburrimiento.", "nota": "Cuatro de Copas: la emoción estructurada. Calma que sostiene o que se estanca.", "cat": "Copas"}, {"name": "Cinco de Copas", "sub": "Copas", "img": "05_cinco_de_copas.webp", "texto": "Algo del vínculo se quiebra. Mirá lo que aún queda en pie.", "nota": "Cinco de Copas: la crisis emocional, la pérdida que enseña, el centro doloroso.", "cat": "Copas"}, {"name": "Seis de Copas", "sub": "Copas", "img": "06_seis_de_copas.webp", "texto": "El amor florece y endulza. Recibilo sin desconfiar.", "nota": "Seis de Copas: la belleza del sentir, el don recibido, la ternura compartida.", "cat": "Copas"}, {"name": "Siete de Copas", "sub": "Copas", "img": "07_siete_de_copas.webp", "texto": "Muchos deseos, muchos espejos. Elegí con el corazón despierto.", "nota": "Siete de Copas: la emoción puesta a prueba, la ilusión que pide discernir.", "cat": "Copas"}, {"name": "Ocho de Copas", "sub": "Copas", "img": "08_ocho_de_copas.webp", "texto": "Tu sentir ya circula pleno. El vínculo encontró su ritmo.", "nota": "Ocho de Copas: el equilibrio emocional, el amor que fluye sin trabarse.", "cat": "Copas"}, {"name": "Nueve de Copas", "sub": "Copas", "img": "09_nueve_de_copas.webp", "texto": "Tan llena de afecto que casi rebalsa. Profundidad que pide soltar.", "nota": "Nueve de Copas: la plenitud emocional que se vuelve crisis, el sentir tan hondo que transforma.", "cat": "Copas"}, {"name": "Diez de Copas", "sub": "Copas", "img": "10_diez_de_copas.webp", "texto": "El corazón colmado. Un ciclo de afecto se cierra y se renueva.", "nota": "Diez de Copas: la acumulación plena del amor. Fin de etapa que abre otra.", "cat": "Copas"}, {"name": "Sota de Copas", "sub": "Copas", "img": "11_sota_de_copas.webp", "texto": "Una ternura nueva, tímida, entra. Dejala crecer.", "nota": "Sota de Copas: la emoción joven, el aprendiz del sentir, el primer latido.", "cat": "Copas"}, {"name": "Caballo de Copas", "sub": "Copas", "img": "12_caballo_de_copas.webp", "texto": "El amor se pone en movimiento. Vas hacia el otro.", "nota": "Caballo de Copas: la acción del sentir, el viaje emocional, el que ofrece su copa.", "cat": "Copas"}, {"name": "Reina de Copas", "sub": "Copas", "img": "13_reina_de_copas.webp", "texto": "Sentís hondo y sostenés sin ahogarte. Madurez del corazón.", "nota": "Reina de Copas: la maestría interior de la emoción, la que ama sin perderse.", "cat": "Copas"}, {"name": "Rey de Copas", "sub": "Copas", "img": "14_rey_de_copas.webp", "texto": "Dominás tus aguas sin reprimirlas. Emoción madura.", "nota": "Rey de Copas: la realización del sentir en el mundo, la autoridad emocional serena.", "cat": "Copas"}, {"name": "As de Espadas", "sub": "Espadas", "img": "01_as_de_espadas.webp", "texto": "Una verdad afilada te corta la niebla. Mirala de frente.", "nota": "As de Espadas: el don de la mente, la claridad que corta. Una idea pura nace.", "cat": "Espadas"}, {"name": "Dos de Espadas", "sub": "Espadas", "img": "02_dos_de_espadas.webp", "texto": "Dos pensamientos en balanza. Aún no es momento de decidir.", "nota": "Dos de Espadas: la mente en pausa, el equilibrio tenso, la decisión que se gesta.", "cat": "Espadas"}, {"name": "Tres de Espadas", "sub": "Espadas", "img": "03_tres_de_espadas.webp", "texto": "Algo dolió y lo entendiste. La herida también es lúcida.", "nota": "Tres de Espadas: la primera ruptura mental, el dolor que aclara, la verdad que sale.", "cat": "Espadas"}, {"name": "Cuatro de Espadas", "sub": "Espadas", "img": "04_cuatro_de_espadas.webp", "texto": "La mente necesita descanso. Pará antes de seguir pensando.", "nota": "Cuatro de Espadas: la estructura del pensar, la tregua. Reposo o estancamiento mental.", "cat": "Espadas"}, {"name": "Cinco de Espadas", "sub": "Espadas", "img": "05_cinco_de_espadas.webp", "texto": "Un conflicto te prueba. ¿Qué victoria vale el costo?", "nota": "Cinco de Espadas: la crisis de la mente, el conflicto en el centro, el desafío que enseña.", "cat": "Espadas"}, {"name": "Seis de Espadas", "sub": "Espadas", "img": "06_seis_de_espadas.webp", "texto": "Cruzás hacia aguas más calmas. La mente al fin afloja.", "nota": "Seis de Espadas: la belleza de la claridad, el tránsito hacia la paz, el don de entender.", "cat": "Espadas"}, {"name": "Siete de Espadas", "sub": "Espadas", "img": "07_siete_de_espadas.webp", "texto": "Tu mente pide estrategia. Actuá con astucia, no con miedo.", "nota": "Siete de Espadas: el pensamiento puesto en acción, la maniobra, el desafío sutil.", "cat": "Espadas"}, {"name": "Ocho de Espadas", "sub": "Espadas", "img": "08_ocho_de_espadas.webp", "texto": "Te sentís atrapada por ideas. Las cuerdas son de tu mente.", "nota": "Ocho de Espadas: el equilibrio mental que se vuelve cárcel; la prisión que el pensar inventó.", "cat": "Espadas"}, {"name": "Nueve de Espadas", "sub": "Espadas", "img": "09_nueve_de_espadas.webp", "texto": "El insomnio del que piensa demasiado. Pero casi amanece.", "nota": "Nueve de Espadas: la crisis de la mente plena, la angustia que precede a la transformación.", "cat": "Espadas"}, {"name": "Diez de Espadas", "sub": "Espadas", "img": "10_diez_de_espadas.webp", "texto": "Un pensamiento llega a su fin. Dejá morir esa idea.", "nota": "Diez de Espadas: la acumulación máxima del intelecto. Fin de ciclo mental, alivio tras el cierre.", "cat": "Espadas"}, {"name": "Sota de Espadas", "sub": "Espadas", "img": "11_sota_de_espadas.webp", "texto": "Una mente curiosa y filosa despierta. Dejala preguntar.", "nota": "Sota de Espadas: la inteligencia joven, el aprendiz de la verdad, el primer filo.", "cat": "Espadas"}, {"name": "Caballo de Espadas", "sub": "Espadas", "img": "12_caballo_de_espadas.webp", "texto": "Ideas que galopan, ganas de cortar y avanzar. Cuidá el ímpetu.", "nota": "Caballo de Espadas: la acción de la mente, el viaje veloz, el que carga con su verdad.", "cat": "Espadas"}, {"name": "Reina de Espadas", "sub": "Espadas", "img": "13_reina_de_espadas.webp", "texto": "Pensás claro y sostenés tu verdad sin endurecerte.", "nota": "Reina de Espadas: la maestría interior de la mente, la lucidez que no pierde el alma.", "cat": "Espadas"}, {"name": "Rey de Espadas", "sub": "Espadas", "img": "14_rey_de_espadas.webp", "texto": "Tu palabra ordena. Usá el filo para abrir, no para herir.", "nota": "Rey de Espadas: la realización del intelecto en el mundo, la autoridad de la verdad.", "cat": "Espadas"}, {"name": "As de Oros", "sub": "Oros", "img": "01_as_de_oros.webp", "texto": "Algo concreto se te ofrece. Tocalo, es real.", "nota": "As de Oros: el don de la materia, la semilla del cuerpo y lo concreto. Un comienzo tangible.", "cat": "Oros"}, {"name": "Dos de Oros", "sub": "Oros", "img": "02_dos_de_oros.webp", "texto": "Hacés malabares con lo material. Equilibrá sin tensarte.", "nota": "Dos de Oros: la materia que se acumula y se mueve, el equilibrio que aún se gesta.", "cat": "Oros"}, {"name": "Tres de Oros", "sub": "Oros", "img": "03_tres_de_oros.webp", "texto": "Tu trabajo empieza a tener forma. Primer fruto concreto.", "nota": "Tres de Oros: la primera realización material, el oficio que sale al mundo.", "cat": "Oros"}, {"name": "Cuatro de Oros", "sub": "Oros", "img": "04_cuatro_de_oros.webp", "texto": "Guardás fuerte lo que tenés. ¿Seguridad o miedo a soltar?", "nota": "Cuatro de Oros: la estructura de la materia, la base firme o el apego que ahoga.", "cat": "Oros"}, {"name": "Cinco de Oros", "sub": "Oros", "img": "05_cinco_de_oros.webp", "texto": "Una carencia te aprieta. La prueba del cuerpo enseña a pedir.", "nota": "Cinco de Oros: la crisis material, la falta en el centro, el desafío que despierta.", "cat": "Oros"}, {"name": "Seis de Oros", "sub": "Oros", "img": "06_seis_de_oros.webp", "texto": "Lo material florece y se reparte. Dar y recibir en justa medida.", "nota": "Seis de Oros: la belleza de la materia, el don que circula, la abundancia compartida.", "cat": "Oros"}, {"name": "Siete de Oros", "sub": "Oros", "img": "07_siete_de_oros.webp", "texto": "Sembraste y ahora esperás. La tierra pide paciencia activa.", "nota": "Siete de Oros: el esfuerzo material puesto en el mundo, la pausa antes de la cosecha.", "cat": "Oros"}, {"name": "Ocho de Oros", "sub": "Oros", "img": "08_ocho_de_oros.webp", "texto": "Tu cuerpo y tu oficio encontraron su ritmo. Maestría que se construye.", "nota": "Ocho de Oros: el equilibrio de la materia, el trabajo paciente que perfecciona.", "cat": "Oros"}, {"name": "Nueve de Oros", "sub": "Oros", "img": "09_nueve_de_oros.webp", "texto": "Tenés mucho, casi de sobra. La abundancia también pide soltar.", "nota": "Nueve de Oros: la plenitud material que se vuelve crisis, el cuerpo lleno que pide trascender.", "cat": "Oros"}, {"name": "Diez de Oros", "sub": "Oros", "img": "10_diez_de_oros.webp", "texto": "La cosecha completa. Un ciclo material se cierra y deja herencia.", "nota": "Diez de Oros: la acumulación máxima de la materia. Fin de etapa, base para lo que sigue.", "cat": "Oros"}, {"name": "Sota de Oros", "sub": "Oros", "img": "11_sota_de_oros.webp", "texto": "Un proyecto concreto, joven, pide tu atención. Cuidalo.", "nota": "Sota de Oros: la energía joven de la materia, el aprendiz del cuerpo y del oficio.", "cat": "Oros"}, {"name": "Caballo de Oros", "sub": "Oros", "img": "12_caballo_de_oros.webp", "texto": "Avanzás lento pero firme hacia lo concreto. Constancia.", "nota": "Caballo de Oros: la acción de la materia, el trabajo en marcha, el paso que no se apura.", "cat": "Oros"}, {"name": "Reina de Oros", "sub": "Oros", "img": "13_reina_de_oros.webp", "texto": "Sostenés el cuerpo y la casa desde una raíz honda.", "nota": "Reina de Oros: la maestría interior de la materia, la que nutre y hace florecer lo concreto.", "cat": "Oros"}, {"name": "Rey de Oros", "sub": "Oros", "img": "14_rey_de_oros.webp", "texto": "Dominás lo material sin volverte su esclava. Abundancia madura.", "nota": "Rey de Oros: la realización de la materia en el mundo, la autoridad que construye y sostiene.", "cat": "Oros"}];
-const grid=document.getElementById('grid');
-function render(cat){
-  grid.innerHTML='';
-  const list=CARDS.filter(c=>cat==='todas'||c.cat===cat);
-  list.forEach((c,i)=>{
-    const d=document.createElement('div');d.className='carta';
-    d.innerHTML='<div class="imgwrap"><img src="cards/'+c.img+'" alt="'+c.name+'" loading="lazy"></div><div class="n">'+c.name+'</div><div class="s">'+c.sub+'</div>';
-    d.onclick=()=>abrir(c);grid.appendChild(d);
-    setTimeout(()=>d.classList.add('in'), Math.min(i,24)*30);
-  });
-}
-function abrir(c){
-  document.getElementById('m-img').src='cards/'+c.img;
-  document.getElementById('m-sub').textContent=c.sub;
-  document.getElementById('m-name').textContent=c.name;
-  document.getElementById('m-texto').textContent='"'+c.texto+'"';
-  document.getElementById('m-nota').textContent=c.nota;
-  document.getElementById('modal').classList.add('open');
-}
-document.getElementById('cerrar').onclick=()=>document.getElementById('modal').classList.remove('open');
-document.getElementById('modal').onclick=e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('open');};
-document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('modal').classList.remove('open');});
-document.getElementById('filtros').onclick=e=>{
-  if(!e.target.classList.contains('chip'))return;
-  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));
-  e.target.classList.add('on');render(e.target.dataset.c);
-};
-render('todas');
-/* fondo estrellas */
+/* ── estrellas ── */
 const bg=document.getElementById('cv-bg'),bx=bg.getContext('2d');
 const sk=document.getElementById('cv-sakura'),sx=sk.getContext('2d');
-function size(){bg.width=sk.width=innerWidth;bg.height=sk.height=innerHeight;}size();addEventListener('resize',size);
-let st=[];function ini(){st=Array.from({length:Math.round(innerWidth*innerHeight/12000)},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.2+.3,a:Math.random(),v:Math.random()*.016+.004}));}ini();
-function loop(){const g=bx.createRadialGradient(innerWidth/2,innerHeight*.3,40,innerWidth/2,innerHeight*.6,Math.max(innerWidth,innerHeight)*.85);g.addColorStop(0,'#190a30');g.addColorStop(1,'#0D0418');bx.fillStyle=g;bx.fillRect(0,0,innerWidth,innerHeight);st.forEach(s=>{s.a+=s.v;const al=.2+Math.abs(Math.sin(s.a))*.7;bx.beginPath();bx.arc(s.x,s.y,s.r,0,7);bx.fillStyle='rgba(206,170,232,'+al+')';bx.fill();});requestAnimationFrame(loop);}loop();
-/* petalos sutiles */
-function nuevo(init){return{x:Math.random()*innerWidth,y:init?Math.random()*innerHeight:-20,s:Math.random()*5+3,vy:Math.random()*.4+.25,vx:Math.random()*.4-.2,rot:Math.random()*6,vr:Math.random()*.03-.015,a:Math.random()*.35+.25};}
-let pe=Array.from({length:12},()=>nuevo(true));
-function lluvia(){sx.clearRect(0,0,innerWidth,innerHeight);pe.forEach((p,i)=>{p.y+=p.vy;p.x+=p.vx;p.rot+=p.vr;if(p.y>innerHeight+20)pe[i]=nuevo(false);sx.save();sx.translate(p.x,p.y);sx.rotate(p.rot);sx.fillStyle='rgba(212,120,154,'+p.a+')';sx.beginPath();sx.ellipse(0,0,p.s,p.s*.55,0,0,7);sx.fill();sx.restore();});requestAnimationFrame(lluvia);}lluvia();
+function size(){bg.width=sk.width=innerWidth;bg.height=sk.height=innerHeight;}
+size();addEventListener('resize',size);
+let estrellas=[];
+function initEstrellas(){estrellas=Array.from({length:Math.round(innerWidth*innerHeight/9000)},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.3+.3,a:Math.random(),v:Math.random()*.018+.004}));}
+initEstrellas();
+function fondo(){
+  const g=bx.createRadialGradient(innerWidth/2,innerHeight*.35,40,innerWidth/2,innerHeight*.6,Math.max(innerWidth,innerHeight)*.8);
+  g.addColorStop(0,'#1a0930');g.addColorStop(1,'#0D0418');
+  bx.fillStyle=g;bx.fillRect(0,0,innerWidth,innerHeight);
+  estrellas.forEach(s=>{s.a+=s.v;const al=.25+Math.abs(Math.sin(s.a))*.7;bx.beginPath();bx.arc(s.x,s.y,s.r,0,7);bx.fillStyle=`rgba(206,170,232,${al})`;bx.fill();});
+  requestAnimationFrame(fondo);
+}fondo();
+/* ── sakura ── */
+function nuevo(init){return{x:Math.random()*innerWidth,y:init?Math.random()*innerHeight:-20,s:Math.random()*6+4,vy:Math.random()*.5+.3,vx:Math.random()*.5-.25,rot:Math.random()*6,vr:Math.random()*.04-.02,a:Math.random()*.4+.3};}
+let petalos=Array.from({length:16},()=>nuevo(true));
+function lluvia(){
+  sx.clearRect(0,0,innerWidth,innerHeight);
+  petalos.forEach((p,i)=>{p.y+=p.vy;p.x+=p.vx;p.rot+=p.vr;if(p.y>innerHeight+20)petalos[i]=nuevo(false);
+    sx.save();sx.translate(p.x,p.y);sx.rotate(p.rot);sx.fillStyle=`rgba(212,120,154,${p.a})`;sx.beginPath();sx.ellipse(0,0,p.s,p.s*.55,0,0,7);sx.fill();sx.restore();});
+  requestAnimationFrame(lluvia);
+}lluvia();
 </script>
 </body>
 </html>
+
+
+
