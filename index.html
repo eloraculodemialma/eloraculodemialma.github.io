@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Oráculo de mi Alma · Enlaces</title>
+<meta name="description" content="El Oráculo de mi Alma — cuentos, tarot y reconstrucción. Todos mis enlaces en un solo lugar.">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,400;1,600&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0D0418;--v4:#4B2067;--rv:#C084D4;--rp:#D4789A;
+  --gold:#C9A84C;--tx1:#FADADD;--tx2:#EDD5E8;--tx4:#B89AAC;
+}
+html,body{width:100%;min-height:100%;background:var(--bg);font-family:'Lora',Georgia,serif;color:var(--tx2);overflow-x:hidden;}
+#cv-bg{position:fixed;inset:0;z-index:0;}
+#cv-sakura{position:fixed;inset:0;z-index:1;pointer-events:none;}
+
+.wrap{position:relative;z-index:5;max-width:480px;margin:0 auto;padding:54px 26px 60px;display:flex;flex-direction:column;align-items:center;text-align:center;min-height:100vh;}
+
+/* cabecera */
+.ornamento{width:84px;height:84px;border-radius:50%;border:1.5px solid rgba(201,168,76,.55);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.5rem;margin-bottom:20px;position:relative;background:radial-gradient(circle at 40% 35%,rgba(75,32,103,.7),rgba(13,4,24,.95));box-shadow:0 0 40px rgba(192,132,212,.3);}
+.ornamento::before{content:'';position:absolute;inset:-9px;border-radius:50%;border:1px solid rgba(192,132,212,.22);animation:giro 16s linear infinite;}
+@keyframes giro{to{transform:rotate(360deg)}}
+.titulo{font-family:'Dancing Script',cursive;font-weight:700;font-size:2.5rem;color:var(--tx1);line-height:1.1;text-shadow:0 0 38px rgba(192,132,212,.55);}
+.tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--tx2);opacity:.88;margin:12px 0 6px;line-height:1.6;}
+.marca{font-family:'Cinzel Decorative',serif;font-size:.5rem;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;opacity:.8;margin-bottom:34px;}
+
+/* enlaces */
+.enlaces{width:100%;display:flex;flex-direction:column;gap:15px;}
+.link{
+  display:flex;align-items:center;gap:16px;text-decoration:none;
+  padding:17px 20px;border-radius:16px;
+  background:rgba(75,32,103,.28);
+  border:1px solid rgba(201,168,76,.35);
+  backdrop-filter:blur(6px);
+  transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.link:hover{transform:translateY(-3px);background:rgba(192,132,212,.18);border-color:rgba(201,168,76,.7);box-shadow:0 8px 30px rgba(192,132,212,.25);}
+.link .ic{font-size:1.5rem;width:34px;flex:0 0 34px;text-align:center;filter:drop-shadow(0 0 8px rgba(192,132,212,.5));}
+.link .tx{flex:1;text-align:left;}
+.link .t1{font-family:'Cormorant Garamond',serif;font-size:1.18rem;color:var(--tx1);font-weight:600;line-height:1.2;}
+.link .t2{font-family:'Lora',serif;font-style:italic;font-size:.78rem;color:var(--tx4);margin-top:2px;}
+.link .flecha{color:var(--gold);opacity:.6;font-size:1rem;}
+
+.destacado{background:rgba(201,168,76,.14);border-color:rgba(201,168,76,.6);}
+
+.pie{margin-top:38px;display:flex;flex-direction:column;align-items:center;gap:14px;}
+.redes{display:flex;gap:22px;}
+.redes a{color:var(--tx4);text-decoration:none;font-size:1.5rem;transition:color .2s,transform .2s;}
+.redes a:hover{color:var(--rv);transform:scale(1.15);}
+.firma{font-family:'Cinzel Decorative',serif;font-size:.46rem;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;opacity:.7;}
+</style>
+</head>
+<body>
+<canvas id="cv-bg"></canvas>
+<canvas id="cv-sakura"></canvas>
+
+<div class="wrap">
+  <div class="ornamento">☾</div>
+  <h1 class="titulo">El Oráculo<br>de mi Alma</h1>
+  <p class="tagline">Soy la voz que no sabe<br>callarse a sí misma.</p>
+  <div class="marca">✦ Cuentos que curan · Cartas que hablan ✦</div>
+
+  <nav class="enlaces">
+    <!-- ⬇️ Reemplazá las URLs (href) por las reales de tu blog -->
+    <a class="link destacado" href="https://eloraculodemialma.blog/pregunta-al-tarot">
+      <span class="ic">🃏</span>
+      <span class="tx"><span class="t1">Pregúntale al Tarot</span><span class="t2">Pensá una pregunta. La carta responde.</span></span>
+      <span class="flecha">↗</span>
+    </a>
+    <a class="link" href="https://eloraculodemialma.blog">
+      <span class="ic">📖</span>
+      <span class="tx"><span class="t1">Leé los cuentos</span><span class="t2">Relatos del Oráculo en el blog</span></span>
+      <span class="flecha">↗</span>
+    </a>
+    <a class="link" href="https://eloraculodemialma.blog/mazo">
+      <span class="ic">🕯️</span>
+      <span class="tx"><span class="t1">El Mazo de 78 cartas</span><span class="t2">Conocé el oráculo completo</span></span>
+      <span class="flecha">↗</span>
+    </a>
+    <a class="link" href="https://www.instagram.com/eloraculodemialma">
+      <span class="ic">📷</span>
+      <span class="tx"><span class="t1">Instagram</span><span class="t2">Stories y talismanes diarios</span></span>
+      <span class="flecha">↗</span>
+    </a>
+    <a class="link" href="https://www.pinterest.com/eloraculodemialma">
+      <span class="ic">📌</span>
+      <span class="tx"><span class="t1">Pinterest</span><span class="t2">Frases para guardar y volver</span></span>
+      <span class="flecha">↗</span>
+    </a>
+  </nav>
+
+  <div class="pie">
+    <div class="redes">
+      <a href="https://www.tiktok.com/@eloraculodemialma" title="TikTok">♪</a>
+      <a href="https://www.instagram.com/eloraculodemialma" title="Instagram">◎</a>
+      <a href="https://www.pinterest.com/eloraculodemialma" title="Pinterest">✦</a>
+    </div>
+    <div class="firma">eloraculodemialma.blog</div>
+  </div>
+</div>
+
+<script>
+/* ── estrellas ── */
+const bg=document.getElementById('cv-bg'),bx=bg.getContext('2d');
+const sk=document.getElementById('cv-sakura'),sx=sk.getContext('2d');
+function size(){bg.width=sk.width=innerWidth;bg.height=sk.height=innerHeight;}
+size();addEventListener('resize',size);
+let estrellas=[];
+function initEstrellas(){estrellas=Array.from({length:Math.round(innerWidth*innerHeight/9000)},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.3+.3,a:Math.random(),v:Math.random()*.018+.004}));}
+initEstrellas();
+function fondo(){
+  const g=bx.createRadialGradient(innerWidth/2,innerHeight*.35,40,innerWidth/2,innerHeight*.6,Math.max(innerWidth,innerHeight)*.8);
+  g.addColorStop(0,'#1a0930');g.addColorStop(1,'#0D0418');
+  bx.fillStyle=g;bx.fillRect(0,0,innerWidth,innerHeight);
+  estrellas.forEach(s=>{s.a+=s.v;const al=.25+Math.abs(Math.sin(s.a))*.7;bx.beginPath();bx.arc(s.x,s.y,s.r,0,7);bx.fillStyle=`rgba(206,170,232,${al})`;bx.fill();});
+  requestAnimationFrame(fondo);
+}fondo();
+/* ── sakura ── */
+function nuevo(init){return{x:Math.random()*innerWidth,y:init?Math.random()*innerHeight:-20,s:Math.random()*6+4,vy:Math.random()*.5+.3,vx:Math.random()*.5-.25,rot:Math.random()*6,vr:Math.random()*.04-.02,a:Math.random()*.4+.3};}
+let petalos=Array.from({length:16},()=>nuevo(true));
+function lluvia(){
+  sx.clearRect(0,0,innerWidth,innerHeight);
+  petalos.forEach((p,i)=>{p.y+=p.vy;p.x+=p.vx;p.rot+=p.vr;if(p.y>innerHeight+20)petalos[i]=nuevo(false);
+    sx.save();sx.translate(p.x,p.y);sx.rotate(p.rot);sx.fillStyle=`rgba(212,120,154,${p.a})`;sx.beginPath();sx.ellipse(0,0,p.s,p.s*.55,0,0,7);sx.fill();sx.restore();});
+  requestAnimationFrame(lluvia);
+}lluvia();
+</script>
+</body>
+</html>
